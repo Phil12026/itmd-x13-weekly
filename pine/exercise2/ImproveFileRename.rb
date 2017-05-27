@@ -15,7 +15,7 @@ def countPhotos photos
       puts absolutePath
     end
   else
-    puts "there are " + photos.count.to_s + " photos."
+    puts "There are " + photos.count.to_s + " photos."
   end
   photos.count
 end
