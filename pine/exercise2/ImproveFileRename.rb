@@ -5,3 +5,8 @@ photos = Dir['/home/dnelson/Documents/itmd-x13-weekly/pine/exercise2/photosfolde
 puts "Give a name for this group of photos."
 groupname = gets.chomp
 puts photos.to_s
+
+puts "Photos in folder are as follows."
+photos.each do |absolutePath|
+  puts absolutePath
+end
