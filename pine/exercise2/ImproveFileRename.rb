@@ -2,8 +2,7 @@ require 'yaml'
 
 def grabPhotos
   Dir.chdir './photosfolder'
-  photos = Dir['/home/dnelson/Documents/itmd-x13-weekly/pine/exercise2/photosfolder/*.pic']
-  photos
+  Dir['/home/dnelson/Documents/itmd-x13-weekly/pine/exercise2/photosfolder/*.pic']
 end
 
 def countPhotos photos
