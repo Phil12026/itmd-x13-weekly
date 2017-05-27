@@ -6,6 +6,10 @@ puts "Give a name for this group of photos."
 groupname = gets.chomp
 
 puts "Photos in folder are as follows."
-photos.each do |absolutePath|
-  puts absolutePath
+if photos.count > 15
+  puts "there are " + photos.count.to_s + " number of photos."
+else
+  photos.each do |absolutePath|
+    puts absolutePath
+  end
 end
