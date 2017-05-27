@@ -19,6 +19,13 @@ def countPhotos photos
   photos.count
 end
 
+def whereToStore photos
+  puts "What folder do you want to store the photos in?"
+  userfolder = gets.chomp
+  
+end
+
 photos = grabPhotos
 countPhotos photos
+whereToStore
 
