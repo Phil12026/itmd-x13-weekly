@@ -21,6 +21,6 @@ yaml1 = array.to_yaml
 puts "the next is in yaml format"
 puts yaml1
 
-File.open test2, 'w' do |f|
+File.open 'test2', 'w' do |f|
   f.write yaml1
 end
