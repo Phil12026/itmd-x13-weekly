@@ -17,3 +17,10 @@ array.push "tries WAY to hard to be funny,"
 array.push "and it ends up blowing up in his face."
 puts array.to_s
 
+yaml1 = array.to_yaml
+puts "the next is in yaml format"
+puts yaml1
+
+File.open test2, 'w' do |f|
+  f.write yaml1
+end
