@@ -24,3 +24,16 @@ puts yaml1
 File.open 'test2', 'w' do |f|
   f.write yaml1
 end
+
+puts ""
+puts "below is reading"
+puts ""
+
+input = File.read 'test2'
+yaml2 = YAML::load input
+puts yaml2
+puts input
+puts ""
+puts "Below should be array."
+puts ""
+puts yaml2.to_s
