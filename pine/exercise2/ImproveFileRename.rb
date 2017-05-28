@@ -19,10 +19,11 @@ def countPhotos photos
   photos.count
 end
 
-def whereToStore photos
+def whereToStore 
   puts "What folder do you want to store the photos in?"
   userfolder = gets.chomp
-  check = Dir.exist? "/home/dnelson/Pictures#{userfolder}" 
+  puts "home/dnelson/Pictures/#{userfolder}"
+  check = Dir.exist? "/home/dnelson/Pictures/#{userfolder}" 
 end
 
 photos = grabPhotos
