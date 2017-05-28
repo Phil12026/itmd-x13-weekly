@@ -1,4 +1,4 @@
-require 'yaml'
+require 'fileutils'
 
 def countPhotos photos
   if photos.count == 0
