@@ -34,6 +34,8 @@ def movePhotos photos userfolder
         FileUtils.mv photo "#{userfolder}/photo#{counter}.pic"
         counter += 1
       end
+    puts "all photos have been moved ot the folder you directed"
+    puts "so the original file no longer exists freeing up space."
     break
     elsif cutOrCopy == "COPY"
       photos.each do |photo|
