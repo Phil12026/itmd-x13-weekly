@@ -14,7 +14,7 @@ def countPhotos photos
       puts absolutePath
     end
   else
-    puts "There are " + photos.count.to_s + " photos."
+    puts "There are #{photos.count} photos."
   end
   photos.count
 end
@@ -22,7 +22,7 @@ end
 def whereToStore photos
   puts "What folder do you want to store the photos in?"
   userfolder = gets.chomp
-  
+  check = Dir.exist? "/home/dnelson/Pictures#{userfolder}" 
 end
 
 photos = grabPhotos
