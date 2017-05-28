@@ -22,7 +22,6 @@ end
 def whereToStore 
   puts "What folder do you want to store the photos in?"
   userfolder = gets.chomp
-  puts "home/dnelson/Pictures/#{userfolder}"
   check = Dir.exist? "/home/dnelson/Pictures/#{userfolder}" 
 end
 
