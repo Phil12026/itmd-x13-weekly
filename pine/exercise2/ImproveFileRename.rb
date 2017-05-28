@@ -52,4 +52,4 @@ end
 
 photos = Dir['/home/dnelson/Documents/itmd-x13-weekly/pine/exercise2/photosfolder/*.pic']
 countPhotos photos
-movePhotos photos dest
+movePhotos photos
