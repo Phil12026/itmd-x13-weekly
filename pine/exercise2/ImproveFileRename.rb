@@ -1,10 +1,5 @@
 require 'yaml'
 
-def grabPhotos
-  Dir.chdir './photosfolder'
-  Dir['/home/dnelson/Documents/itmd-x13-weekly/pine/exercise2/photosfolder/*.pic']
-end
-
 def countPhotos photos
   if photos.count == 0
     puts "There are no Photos in the directory."
@@ -16,7 +11,6 @@ def countPhotos photos
   else
     puts "There are #{photos.count} photos."
   end
-  photos.count
 end
 
 def whereToStore 
@@ -26,23 +20,36 @@ def whereToStore
   if check == false
     Dir.mkdir userfolder
   end
-  userfolder
+  "/home/dnelson/Pictures/#{userfolder}"
 end
 
 def movePhotos photos userfolder
+  counter = 1
   while true
     puts "Do you want to cut or copy the photos?"
     puts "Enter cut to delete original, and copy to save the original."
     cutOrCopy = gets.chomp.upcase
     if cutOrCopy == "CUT"
-      FileUtils.mv 
-    elsif
-    
+      photos.each do |photo|    
+        FileUtils.mv photo "#{userfolder}/photo#{counter}.pic"
+        counter += 1
+      end
+    break
+    elsif cutOrCopy == "COPY"
+      photos.each do |photo|
+        FileUtils.cp photo "#{userfolder}/photo#{counter}.pic"
+        counter += 1
+      end
+      puts "All photos have been copied to the folder you directed"
+      puts "without deleating the original copy."
+      break
+    else
+      puts "please enter cut or copy"
     end
   end
 end
 
-photos = grabPhotos
+photos = Dir['/home/dnelson/Documents/itmd-x13-weekly/pine/exercise2/photosfolder/*.pic']
 countPhotos photos
 whereToStore
 movePhotos photos whereToStore
