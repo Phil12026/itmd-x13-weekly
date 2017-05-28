@@ -13,17 +13,16 @@ def countPhotos photos
   end
 end
 
-def whereToStore 
+
+def movePhotos photos
   puts "What folder do you want to store the photos in?"
   userfolder = gets.chomp
   check = Dir.exist? "/home/dnelson/Pictures/#{userfolder}" 
   if check == false
     Dir.mkdir userfolder
   end
-  "/home/dnelson/Pictures/#{userfolder}"
-end
+  userfolder = "/home/dnelson/Pictures/#{userfolder}"
 
-def movePhotos photos userfolder
   counter = 1
   while true
     puts "Do you want to cut or copy the photos?"
@@ -53,5 +52,4 @@ end
 
 photos = Dir['/home/dnelson/Documents/itmd-x13-weekly/pine/exercise2/photosfolder/*.pic']
 countPhotos photos
-whereToStore
-movePhotos photos whereToStore
+movePhotos photos dest
