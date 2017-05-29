@@ -61,6 +61,8 @@ class dog
     end
   end
 
+
+  private
   def playBall
     if @gender == "Male"
       puts "You toss the ball to #{@name} and he chases after it."
@@ -70,7 +72,7 @@ class dog
     @energy -= 1
   end
 
-  def playstick
+  def playStick
     if @gender == "Male"
       puts "You toss the stick to #{@name} and he chases after it."
     elsif @gender == "Female"
@@ -88,7 +90,6 @@ class dog
     @energy -= 1
   end
 
-  private
   def tired?
     @energy <= 2
   end
