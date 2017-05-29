@@ -19,18 +19,19 @@ def movePhotos photos
   userfolder = gets.chomp
   check = Dir.exist? "/home/dnelson/Pictures/#{userfolder}" 
   if check == false
-    Dir.mkdir userfolder
+    Dir.mkdir "/home/dnelson/Pictures/#{userfolder}"
   end
   userfolder = "/home/dnelson/Pictures/#{userfolder}"
 
   counter = 1
   while true
     puts "Do you want to cut or copy the photos?"
+    puts "#{userfolder}, #{counter}"
     puts "Enter cut to delete original, and copy to save the original."
     cutOrCopy = gets.chomp.upcase
     if cutOrCopy == "CUT"
       photos.each do |photo|    
-        FileUtils.mv photo "#{userfolder}/photo#{counter}.pic"
+        FileUtils.mv photo, "#{userfolder}/photo#{counter}.pic"
         counter += 1
       end
     puts "all photos have been moved ot the folder you directed"
@@ -38,7 +39,7 @@ def movePhotos photos
     break
     elsif cutOrCopy == "COPY"
       photos.each do |photo|
-        FileUtils.cp photo "#{userfolder}/photo#{counter}.pic"
+        FileUtils.cp photo, "#{userfolder}/photo#{counter}.pic"
         counter += 1
       end
       puts "All photos have been copied to the folder you directed"
