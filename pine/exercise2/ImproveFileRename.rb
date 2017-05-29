@@ -59,7 +59,14 @@ def movePhotos photos
       break
     elsif cutOrCopy == "COPY"
       photos.each do |photo|
-        FileUtils.cp photo, "#{userFolder}/photo#{counter}.pic"
+        check = File.exist? "#{userFolder}/photo#{counter}.pic"
+        if check == false
+          FileUtils.cp photo, "#{userFolder}/photo#{counter}.pic"
+        else
+          openName = findOpenName "#{userFolder}/photo#{counter}_version"
+          FileUtils.cp photo, "#{openName}"
+          changedName.push openName
+        end
         counter += 1
       end
       puts "All photos have been copied to the folder you directed"
