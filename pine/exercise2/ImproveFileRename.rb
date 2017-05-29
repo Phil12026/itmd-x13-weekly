@@ -23,7 +23,7 @@ def findOpenName name
   "#{name}#{version}.pic"
 end
 
-def movePhotos photos
+def whichFolder
   puts "What folder do you want to store the photos in?"
   userfolder = gets.chomp
   userfolder = "/home/dnelson/Pictures/#{userfolder}"
@@ -31,7 +31,11 @@ def movePhotos photos
   if check == false
     Dir.mkdir "#{userfolder}"
   end
+  userfolder
+end
 
+def movePhotos photos
+  userfolder = whichFolder
   counter = 1
   while true
     puts "Do you want to cut or copy the photos?"
