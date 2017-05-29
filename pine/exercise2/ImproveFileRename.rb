@@ -34,6 +34,16 @@ def whichFolder
   userFolder
 end
 
+def filesNameChanged files
+  if files.count > 0
+    puts "some of the photos names where already taken so their name was changed to an open name."
+    puts "here is a list of the photos that had their names changed."
+    files.each do |name|
+      puts name
+    end
+  end
+end
+
 def movePhotos photos
   userFolder = whichFolder
   changedName = []
@@ -75,14 +85,8 @@ def movePhotos photos
     else
       puts "please enter cut or copy"
     end
-    if changedName.count > 0
-      puts "some of the photos names where already taken so their name was changed to an open name."
-      puts "here is a list of the photos that had their names changed."
-      changedName.each do |name|
-        puts name
-      end
-    end
   end
+  filesNameChanged changedname
 end
 
 photos = Dir['/home/dnelson/Documents/itmd-x13-weekly/pine/exercise2/photosfolder/*.pic']
