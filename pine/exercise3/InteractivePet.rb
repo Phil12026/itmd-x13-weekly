@@ -37,17 +37,26 @@ class dog
   def sleep
     puts "you put #{@name} to sleep in their ben."
     if hungery?
-      puts "#{@name} woke up and is starving! You need to feed #{@pronoun}"
+      puts "#{@name} wakes up and is starving! You need to feed #{@pronoun}"
+    elsif needsToGO?
+      puts "#{@name} wakes up and needs to go to the bathroom quick walk #{@pronoun}!"
+    elsif @energy = 10
+      puts "#{@name} wakes up full rested and looks at you expectantly."
     end
+    @energy += 1
     timeMarchesOn
-    
-  end
+   end
 
   def timeMarchesOn
     if @stomach > 0
       @stomach -= 1
       intestine += 1
     end
+  end
+
+  def walk
+    puts "You go take #{@name} our for a walk so #{@pronoun} can go to the bathroom."
+    puts "#{@pronoun} is so excited to go for walk, #{@pronoun} looks so happy."
   end
 
   def park
