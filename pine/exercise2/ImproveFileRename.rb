@@ -13,25 +13,39 @@ def countPhotos photos
   end
 end
 
+def findOpenName name
+  version = 2
+  check = File.exist? "#{name}#{version}.pic"
+  while check == true
+    version += 1
+    check = File.exist? "#{name}#{version}.pic"
+  end
+  "#{name}#{version}.pic"
+end
 
 def movePhotos photos
   puts "What folder do you want to store the photos in?"
   userfolder = gets.chomp
-  check = Dir.exist? "/home/dnelson/Pictures/#{userfolder}" 
-  if check == false
-    Dir.mkdir "/home/dnelson/Pictures/#{userfolder}"
-  end
   userfolder = "/home/dnelson/Pictures/#{userfolder}"
+  check = Dir.exist? "#{userfolder}" 
+  if check == false
+    Dir.mkdir "#{userfolder}"
+  end
 
   counter = 1
   while true
     puts "Do you want to cut or copy the photos?"
-    puts "#{userfolder}, #{counter}"
     puts "Enter cut to delete original, and copy to save the original."
     cutOrCopy = gets.chomp.upcase
     if cutOrCopy == "CUT"
-      photos.each do |photo|    
-        FileUtils.mv photo, "#{userfolder}/photo#{counter}.pic"
+      photos.each do |photo|
+        check = File.exist? "#{userfolder}/photo#{counter}.pic"
+        if check == false
+          FileUtils.mv photo, "#{userfolder}/photo#{counter}.pic"
+        else
+          openName = findOpenName "#{userfolder}/photo#{counter}_version"
+          FileUtils.mv photo, "#{openName}"
+        end
         counter += 1
       end
     puts "all photos have been moved ot the folder you directed"
