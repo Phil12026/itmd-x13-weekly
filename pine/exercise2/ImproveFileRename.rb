@@ -25,17 +25,18 @@ end
 
 def whichFolder
   puts "What folder do you want to store the photos in?"
-  userfolder = gets.chomp
-  userfolder = "/home/dnelson/Pictures/#{userfolder}"
-  check = Dir.exist? "#{userfolder}" 
+  userFolder = gets.chomp
+  userFolder = "/home/dnelson/Pictures/#{userFolder}"
+  check = Dir.exist? "#{userFolder}" 
   if check == false
-    Dir.mkdir "#{userfolder}"
+    Dir.mkdir "#{userFolder}"
   end
-  userfolder
+  userFolder
 end
 
 def movePhotos photos
-  userfolder = whichFolder
+  userFolder = whichFolder
+  changedName = []
   counter = 1
   while true
     puts "Do you want to cut or copy the photos?"
@@ -43,21 +44,22 @@ def movePhotos photos
     cutOrCopy = gets.chomp.upcase
     if cutOrCopy == "CUT"
       photos.each do |photo|
-        check = File.exist? "#{userfolder}/photo#{counter}.pic"
+        check = File.exist? "#{userFolder}/photo#{counter}.pic"
         if check == false
-          FileUtils.mv photo, "#{userfolder}/photo#{counter}.pic"
+          FileUtils.mv photo, "#{userFolder}/photo#{counter}.pic"
         else
-          openName = findOpenName "#{userfolder}/photo#{counter}_version"
+          openName = findOpenName "#{userFolder}/photo#{counter}_version"
           FileUtils.mv photo, "#{openName}"
+          changedName.push openName
         end
         counter += 1
       end
-    puts "all photos have been moved ot the folder you directed"
-    puts "so the original file no longer exists freeing up space."
-    break
+      puts "all photos have been moved ot the folder you directed"
+      puts "so the original file no longer exists freeing up space."
+      break
     elsif cutOrCopy == "COPY"
       photos.each do |photo|
-        FileUtils.cp photo, "#{userfolder}/photo#{counter}.pic"
+        FileUtils.cp photo, "#{userFolder}/photo#{counter}.pic"
         counter += 1
       end
       puts "All photos have been copied to the folder you directed"
@@ -65,6 +67,13 @@ def movePhotos photos
       break
     else
       puts "please enter cut or copy"
+    end
+    if changedName.count > 0
+      puts "some of the photos names where already taken so their name was changed to an open name."
+      puts "here is a list of the photos that had their names changed."
+      changedName.each do |name|
+        puts name
+      end
     end
   end
 end
