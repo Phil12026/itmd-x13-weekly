@@ -11,9 +11,11 @@ class dog
     genderDecider = rand(1)
     if genderDecider == 0
       @gender = "Female"
+      @pronoun = "her"
       @afffectionatenickname = "girl"
     elsif genderDecider == 1
       @gender = "Male"
+      @pronoun = "him"
       @afffectionatenickname = "boy"
     end
   end
@@ -28,7 +30,24 @@ class dog
 
   def feed
     puts "You feed #{@name} some food."
-    puts "#{@name} hungerly eats some food."
+    puts "#{@name} hungerly eats the food."
+    @stomach = 10
+  end
+
+  def sleep
+    puts "you put #{@name} to sleep in their ben."
+    if hungery?
+      puts "#{@name} woke up and is starving! You need to feed #{@pronoun}"
+    end
+    timeMarchesOn
+    
+  end
+
+  def timeMarchesOn
+    if @stomach > 0
+      @stomach -= 1
+      intestine += 1
+    end
   end
 
   def park
@@ -54,7 +73,7 @@ class dog
       end
     end
     if tired?
-      puts "#{@name} slowly walks home, to tired to run with you."
+      puts "#{@name} slowly walks home, to tired to run with you like normal."
     else
       puts "After a fun time at the park you and #{@name} run home together."
       @energy -= 1
@@ -64,29 +83,17 @@ class dog
 
   private
   def playBall
-    if @gender == "Male"
-      puts "You toss the ball to #{@name} and he chases after it."
-    elsif @gender == "Female"
-      puts "You toss the ball to #{@name} and she chases after it."
-    end
+    puts "You toss the ball to #{@name} and #{@pronoun} chases after it."
     @energy -= 1
   end
 
   def playStick
-    if @gender == "Male"
-      puts "You toss the stick to #{@name} and he chases after it."
-    elsif @gender == "Female"
-      puts "You toss the stick to #{@name} and she chases after it."
-    end
+    puts "You toss the stick to #{@name} and #{@pronoun} chases after it."
     @energy -= 1
   end
 
   def playFrizbee
-    if @gender == "Male"
-      puts "You toss the frizbee to #{@name} and he chases after it."
-    elsif @gender == "Female"
-      puts "You toss the frizbee to #{@name} and she chases after it."
-    end
+    puts "You toss the frizbee to #{@name} and #{@pronoun} chases after it."
     @energy -= 1
   end
 
@@ -100,4 +107,5 @@ class dog
 
   def needsToGo?
    @intestine >= 8
+  end
 end
