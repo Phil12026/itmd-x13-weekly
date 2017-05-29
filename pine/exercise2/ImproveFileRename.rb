@@ -36,8 +36,8 @@ end
 
 def filesNameChanged files
   if files.count > 0
-    puts "some of the photos names where already taken so their name was changed to an open name."
-    puts "here is a list of the photos that had their names changed."
+    puts "Some of the photos names where already taken so their name was changed to an open name."
+    puts "Here is a list of the photos that had their names changed."
     files.each do |name|
       puts name
     end
