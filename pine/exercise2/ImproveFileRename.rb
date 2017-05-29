@@ -48,8 +48,8 @@ def movePhotos photos
   userFolder = whichFolder
   changedName = []
   counter = 1
+  puts "Do you want to cut or copy the photos?"
   while true
-    puts "Do you want to cut or copy the photos?"
     puts "Enter cut to delete original, and copy to save the original."
     cutOrCopy = gets.chomp.upcase
     if cutOrCopy == "CUT"
