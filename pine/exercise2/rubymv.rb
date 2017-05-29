@@ -3,7 +3,8 @@ photos = Dir['/home/dnelson/Documents/itmd-x13-weekly/pine/exercise2/photosfolde
 counter = 1
 userfolder = './testmv'
 photos.each do |photo|
+  puts photos.class
   puts "before the call"
-  FileUtils.mv photo "#{userfolder}/photo#{counter}.pic"
+  FileUtils.mv photo, "#{userfolder}/photo#{counter}.pic"
   counter += 1
 end
