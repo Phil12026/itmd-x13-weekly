@@ -20,6 +20,7 @@ class dog
     puts "You feed #{@name} some food."
     puts "#{@name} hungerly eats the food."
     @stomach = 10
+	timeMarchesOn
   end
 
   def sleep
@@ -38,6 +39,7 @@ class dog
   def walk
     puts "You go take #{@name} our for a walk so #{@pronoun} can go to the bathroom."
     puts "#{@pronoun} is so excited to go for walk, #{@pronoun} looks so happy."
+	timeMarchesOn
   end
 
   def park
@@ -68,6 +70,7 @@ class dog
       puts "After a fun time at the park you and #{@name} run home together."
       @energy -= 1
     end
+	timeMarchesOn
   end
 
   def interface
