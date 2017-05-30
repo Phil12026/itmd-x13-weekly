@@ -47,12 +47,7 @@ class dog
     timeMarchesOn
    end
 
-  def timeMarchesOn
-    if @stomach > 0
-      @stomach -= 1
-      intestine += 1
-    end
-  end
+  
 
   def walk
     puts "You go take #{@name} our for a walk so #{@pronoun} can go to the bathroom."
@@ -130,6 +125,13 @@ class dog
     @energy -= 1
   end
 
+  def timeMarchesOn
+    if @stomach > 0
+      @stomach -= 1
+      intestine += 1
+    end
+  end
+  
   def playStick
     puts "You toss the stick to #{@name} and #{@pronoun} chases after it."
     @energy -= 1
