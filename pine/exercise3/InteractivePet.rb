@@ -25,6 +25,7 @@ class dog
   def call
       puts "Come here #{@affectionatenickname}! Come here #{@name}"
 	  puts "#{@name} walks over to you with #{@pronoun} touge hanging out of #{@pronoun} mouth."
+	  puts "You spend some time playing with #{@name}"
     end
   end
 
@@ -46,8 +47,6 @@ class dog
     @energy += 1
     timeMarchesOn
    end
-
-  
 
   def walk
     puts "You go take #{@name} our for a walk so #{@pronoun} can go to the bathroom."
