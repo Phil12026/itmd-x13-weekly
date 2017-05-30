@@ -9,19 +9,6 @@ class dog
 	interface
   end
 
-  def genderGenerator
-    genderDecider = rand(1)
-    if genderDecider == 0
-      @gender = "Female"
-      @pronoun = "her"
-      @afffectionatenickname = "girl"
-    elsif genderDecider == 1
-      @gender = "Male"
-      @pronoun = "him"
-      @affectionatenickname = "boy"
-    end
-  end
-
   def call
       puts "Come here #{@affectionatenickname}! Come here #{@name}"
 	  puts "#{@name} walks over to you with #{@pronoun} touge hanging out of #{@pronoun} mouth."
@@ -119,9 +106,18 @@ class dog
   end
 
   private
-  def playBall
-    puts "You toss the ball to #{@name} and #{@pronoun} chases after it."
-    @energy -= 1
+  
+  def genderGenerator
+    genderDecider = rand(1)
+    if genderDecider == 0
+      @gender = "Female"
+      @pronoun = "her"
+      @afffectionatenickname = "girl"
+    elsif genderDecider == 1
+      @gender = "Male"
+      @pronoun = "him"
+      @affectionatenickname = "boy"
+    end
   end
 
   def timeMarchesOn
@@ -131,6 +127,11 @@ class dog
     end
   end
   
+  def playBall
+    puts "You toss the ball to #{@name} and #{@pronoun} chases after it."
+    @energy -= 1
+  end
+
   def playStick
     puts "You toss the stick to #{@name} and #{@pronoun} chases after it."
     @energy -= 1
