@@ -5,6 +5,8 @@ class dog
     @stomach = 10
     @intestine = 0
     genderGenerator
+	puts "You are now the proud oownder of a #{@gender} dog named #{@name}!"
+	interface
   end
 
   def genderGenerator
@@ -16,15 +18,13 @@ class dog
     elsif genderDecider == 1
       @gender = "Male"
       @pronoun = "him"
-      @afffectionatenickname = "boy"
+      @affectionatenickname = "boy"
     end
   end
 
   def call
-    if @gender == "Male"
-      puts "Come here boy! Come here #{@name}"
-    elsif @gender == "Female"
-      puts "Come here girl! Come here #{@name}"
+      puts "Come here #{@affectionatenickname}! Come here #{@name}"
+	  puts "#{@name} walks over to you with #{@pronoun} touge hanging out of #{@pronoun} mouth."
     end
   end
 
@@ -89,6 +89,40 @@ class dog
     end
   end
 
+  def interface
+    choice = 0
+	while choice !=7
+	  puts "What do you want to do with #{@name}?"
+	  puts "Enter 1 to feed #{@name}."
+	  puts "Enter 2 to call #{@name}."
+	  puts "Enter 3 to put #{@name} to sleep."
+	  puts "Enter 4 to walk #{@name}."
+	  puts "Enter 5 to take #{@name} to the park."
+	  puts "Enter 6 to put #{@name} to sleep."
+	  puts "Enter 7 to exit the program."
+	  
+	  if choice = 1
+	    feed
+      elsif choice = 2
+	    call
+      elsif choice = 3
+	    sleep
+	  elsif choice = 4
+	    walk
+	  elsif choice = 5
+	    park
+	  elsif choice = 6
+	    sleep
+	  elsif choice = 7
+	    puts "Your time with #{@name} is done and it is with a heavy heart,"
+		puts "that your return #{@name} to the animal shelter."
+		puts "As you walk home even though your time with #{@name} was brief,"
+		puts "you can't help but miss #{@pronoun} walking next to you"
+		puts "with their tounge hanging out of their mouth and looking up ad you adoringly."
+		puts "You contemplate adopting #{@name} for good next time."
+	  end
+	end
+  end
 
   private
   def playBall
