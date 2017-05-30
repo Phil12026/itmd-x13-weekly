@@ -1,3 +1,4 @@
+#Writen by Dean Nelson for ITMD 513 Summer 2017
 class dog
   def initialize name
     @name = name
