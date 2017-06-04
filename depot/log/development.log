@@ -82,3 +82,335 @@ Completed 200 OK in 53ms (Views: 38.7ms | ActiveRecord: 0.6ms)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Ruby Performance Optimization"], ["description", "<p>\n      <em>Why Ruby Is Slow, and How to Fix It</em> \n      You don’t have to accept slow Ruby or Rails performance. In this\n      comprehensive guide to Ruby optimization, you’ll learn how to write\n      faster Ruby code—but that’s just the beginning. See exactly what makes\n      Ruby and Rails code slow, and how to fix it. Alex Dymo will guide you\n      through perils of memory and CPU optimization, profiling, measuring,\n      performance testing, garbage collection, and tuning. You’ll find that\n      all those “hard” things aren’t so difficult after all, and your code\n      will run orders of magnitude faster.\n      </p>"], ["image_url", "adrpo.jpg"], ["price", 46.0], ["created_at", "2017-06-04 01:19:51.266444"], ["updated_at", "2017-06-04 01:19:51.266444"]]
   [1m[35m (13.6ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/products/new" for 192.168.17.7 at 2017-06-04 11:58:39 -0500
+Cannot render console from 192.168.17.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (2.9ms) [cache miss]
+  Rendered products/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 36ms (Views: 34.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/new" for 192.168.17.7 at 2017-06-04 12:26:59 -0500
+Cannot render console from 192.168.17.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (2.0ms) [cache miss]
+  Rendered products/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/new" for 192.168.17.7 at 2017-06-04 12:27:01 -0500
+Cannot render console from 192.168.17.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (2.0ms) [cache miss]
+  Rendered products/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 192.168.17.7 at 2017-06-04 12:27:19 -0500
+Cannot render console from 192.168.17.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/dnelson/Documents/itmd-x13-weekly/depot/app/views/products/index.html.erb:9: syntax error, unexpected tIDENTIFIER, expecting ')'
+( image_tage(product.image)url, class: 'list_image') );@outp
+                              ^
+/home/dnelson/Documents/itmd-x13-weekly/depot/app/views/products/index.html.erb:9: syntax error, unexpected ')', expecting keyword_end
+ge)url, class: 'list_image') );@output_buffer.safe_append='
+                              ^
+/home/dnelson/Documents/itmd-x13-weekly/depot/app/views/products/index.html.erb:14: syntax error, unexpected ','
+rip_tags(product.description>,
+                              ^
+/home/dnelson/Documents/itmd-x13-weekly/depot/app/views/products/index.html.erb:21: syntax error, unexpected ')'
+', edit_produc_path<product> );@output_buffer.safe_append='<
+                              ^
+/home/dnelson/Documents/itmd-x13-weekly/depot/app/views/products/index.html.erb:26: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/home/dnelson/Documents/itmd-x13-weekly/depot/app/views/products/index.html.erb:32: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/dnelson/Documents/itmd-x13-weekly/depot/app/views/products/index.html.erb:34: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/products/index.html.erb:9: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/products/index.html.erb:9: syntax error, unexpected ')', expecting keyword_end
+app/views/products/index.html.erb:14: syntax error, unexpected ','
+app/views/products/index.html.erb:21: syntax error, unexpected ')'
+app/views/products/index.html.erb:26: syntax error, unexpected keyword_end, expecting ')'
+app/views/products/index.html.erb:32: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/products/index.html.erb:34: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/products" for 192.168.17.7 at 2017-06-04 12:28:48 -0500
+Cannot render console from 192.168.17.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/dnelson/Documents/itmd-x13-weekly/depot/app/views/products/index.html.erb:14: syntax error, unexpected ','
+rip_tags(product.description>,
+                              ^
+/home/dnelson/Documents/itmd-x13-weekly/depot/app/views/products/index.html.erb:21: syntax error, unexpected ')'
+', edit_produc_path<product> );@output_buffer.safe_append='<
+                              ^
+/home/dnelson/Documents/itmd-x13-weekly/depot/app/views/products/index.html.erb:26: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/home/dnelson/Documents/itmd-x13-weekly/depot/app/views/products/index.html.erb:32: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/dnelson/Documents/itmd-x13-weekly/depot/app/views/products/index.html.erb:34: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/products/index.html.erb:14: syntax error, unexpected ','
+app/views/products/index.html.erb:21: syntax error, unexpected ')'
+app/views/products/index.html.erb:26: syntax error, unexpected keyword_end, expecting ')'
+app/views/products/index.html.erb:32: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/products/index.html.erb:34: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/products" for 192.168.17.7 at 2017-06-04 12:29:44 -0500
+Cannot render console from 192.168.17.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/dnelson/Documents/itmd-x13-weekly/depot/app/views/products/index.html.erb:21: syntax error, unexpected ')'
+', edit_produc_path<product> );@output_buffer.safe_append='<
+                              ^
+/home/dnelson/Documents/itmd-x13-weekly/depot/app/views/products/index.html.erb:26: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/home/dnelson/Documents/itmd-x13-weekly/depot/app/views/products/index.html.erb:32: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/dnelson/Documents/itmd-x13-weekly/depot/app/views/products/index.html.erb:34: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/products/index.html.erb:21: syntax error, unexpected ')'
+app/views/products/index.html.erb:26: syntax error, unexpected keyword_end, expecting ')'
+app/views/products/index.html.erb:32: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/products/index.html.erb:34: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/products" for 192.168.17.7 at 2017-06-04 12:30:34 -0500
+Cannot render console from 192.168.17.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/dnelson/Documents/itmd-x13-weekly/depot/app/views/products/index.html.erb:32: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/products/index.html.erb:32: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/products" for 192.168.17.7 at 2017-06-04 12:31:01 -0500
+Cannot render console from 192.168.17.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/dnelson/Documents/itmd-x13-weekly/depot/app/views/products/index.html.erb:33: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/products/index.html.erb:33: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/products" for 192.168.17.7 at 2017-06-04 12:37:39 -0500
+Cannot render console from 192.168.17.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/dnelson/Documents/itmd-x13-weekly/depot/app/views/products/index.html.erb:32: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/products/index.html.erb:32: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/products" for 192.168.17.7 at 2017-06-04 12:38:24 -0500
+Cannot render console from 192.168.17.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/dnelson/Documents/itmd-x13-weekly/depot/app/views/products/index.html.erb:31: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/products/index.html.erb:31: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/products" for 192.168.17.7 at 2017-06-04 12:39:24 -0500
+Cannot render console from 192.168.17.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/dnelson/Documents/itmd-x13-weekly/depot/app/views/products/index.html.erb:31: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/products/index.html.erb:31: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/products" for 192.168.17.7 at 2017-06-04 12:43:09 -0500
+Cannot render console from 192.168.17.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/dnelson/Documents/itmd-x13-weekly/depot/app/views/products/index.html.erb:32: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/products/index.html.erb:32: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/products" for 192.168.17.7 at 2017-06-04 12:43:11 -0500
+Cannot render console from 192.168.17.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/dnelson/Documents/itmd-x13-weekly/depot/app/views/products/index.html.erb:32: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/products/index.html.erb:32: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/products" for 192.168.17.7 at 2017-06-04 14:12:30 -0500
+Cannot render console from 192.168.17.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/dnelson/Documents/itmd-x13-weekly/depot/app/views/products/index.html.erb:32: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/products/index.html.erb:32: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/products" for 192.168.17.7 at 2017-06-04 14:12:57 -0500
+Cannot render console from 192.168.17.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/dnelson/Documents/itmd-x13-weekly/depot/app/views/products/index.html.erb:32: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/products/index.html.erb:32: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/products" for 192.168.17.7 at 2017-06-04 15:23:55 -0500
+Cannot render console from 192.168.17.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/dnelson/Documents/itmd-x13-weekly/depot/app/views/products/index.html.erb:6: syntax error, unexpected keyword_do_block
+e; @products.each |product| do 
+                              ^
+/home/dnelson/Documents/itmd-x13-weekly/depot/app/views/products/index.html.erb:32: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/products/index.html.erb:6: syntax error, unexpected keyword_do_block
+app/views/products/index.html.erb:32: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/products" for 192.168.17.7 at 2017-06-04 15:24:53 -0500
+Cannot render console from 192.168.17.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (133.6ms)
+Completed 500 Internal Server Error in 135ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (The asset "dcbang.jpg" is not present in the asset pipeline.):
+     6: <% @products.each do |product| %>
+     7:   <tr class "<%= cycle('list_line_odd', 'list_line_even') %>">
+     8:     <td>
+     9:       <%= image_tag(product.image_url, class: 'list_image') %>
+    10:     </td>
+    11:     <td class ="list_description>
+    12:       <dl>
+  
+app/views/products/index.html.erb:9:in `block in _app_views_products_index_html_erb__833945561935146877_69981320366200'
+app/views/products/index.html.erb:6:in `_app_views_products_index_html_erb__833945561935146877_69981320366200'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/say/hello" for 127.0.0.1 at 2017-06-04 17:20:28 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/say/hello"):
+  
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/products" for 192.168.17.7 at 2017-06-04 17:23:26 -0500
+Cannot render console from 192.168.17.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (99.0ms)
+Completed 200 OK in 131ms (Views: 129.4ms | ActiveRecord: 0.9ms)
+
+
