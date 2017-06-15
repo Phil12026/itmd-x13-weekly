@@ -589,3 +589,21 @@ Migrating to CreateLineItems (20170615011713)
   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
   [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 192.168.17.7 at 2017-06-15 13:51:52 -0500
+Cannot render console from 192.168.17.7! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StoreController#index as HTML
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/dnelson/Documents/itmd-x13-weekly/depot/app/models/product.rb:16: syntax error, unexpected tIDENTIFIER, expecting ';' or '\n'
+any_line_item referencing this product
+                              ^
+/home/dnelson/Documents/itmd-x13-weekly/depot/app/models/product.rb:18: unterminated string meets end of file
+/home/dnelson/Documents/itmd-x13-weekly/depot/app/models/product.rb:18: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/models/product.rb:16: syntax error, unexpected tIDENTIFIER, expecting ';' or '\n'
+app/models/product.rb:18: unterminated string meets end of file
+app/models/product.rb:18: syntax error, unexpected end-of-input, expecting ')'
+app/controllers/store_controller.rb:3:in `index'
